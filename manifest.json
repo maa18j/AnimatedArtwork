@@ -1,12 +1,31 @@
 {
   "id": "boidu-artwork",
   "name": "Boidu Artwork API",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Animated album artwork source from artwork.boidu.dev",
+  "type": "artwork-source",
   "manifest": {
     "name": "Boidu Artwork API",
-    "description": "Cloudflare Worker for animated album artwork"
+    "description": "Cloudflare Worker API for animated album artwork resolution."
   },
   "github": "https://github.com/boidushya/artwork.boidu.dev",
-  "baseUrl": "https://artwork.boidu.dev"
+  "baseUrl": "https://artwork.boidu.dev",
+  "endpoints": {
+    "searchBySongArtist": "/?song={song}&artist={artist}",
+    "searchByAlbumId": "/?id={albumId}",
+    "searchByAlbumUrl": "/?url={url}",
+    "health": "/health"
+  },
+  "capabilities": [
+    "albumArtwork",
+    "animatedAlbumArtwork",
+    "videoArtwork"
+  ],
+  "priority": {
+    "recommendedOrder": [
+      "searchByAlbumUrl",
+      "searchByAlbumId",
+      "searchBySongArtist"
+    ]
+  }
 }
