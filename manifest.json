@@ -1,0 +1,12 @@
+{
+  "id": "boidu-artwork",
+  "name": "Boidu Artwork API",
+  "version": "1.0.0",
+  "description": "Animated album artwork source from artwork.boidu.dev",
+  "manifest": {
+    "name": "Boidu Artwork API",
+    "description": "Cloudflare Worker for animated album artwork"
+  },
+  "github": "https://github.com/boidushya/artwork.boidu.dev",
+  "baseUrl": "https://artwork.boidu.dev"
+}
